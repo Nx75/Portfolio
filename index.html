@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
     <div class="navbar">
-        <!--<img src="images/gruvbox.png" alt="Nx75 Logo" class="logo">-->
         <nav>
             <a href="#home">Home</a>
             <a href="#skills">Skills</a>
@@ -21,7 +22,10 @@
     <div class="main-container">
         <section id="home">
             <h1>My Portfolio</h1>
-            <img src="images/gruvbox.png" alt="My cool Gruvbox picture">
+            <figure class="profile-pic">
+                <img src="images/gruvbox.png" alt="My cool Gruvbox picture">
+                <figcaption>Nx75 (me) in developer cosplay</figcaption>
+            </figure>
             <p>Sup, Nx75 here.</p>
             <p>Passionate developer (said every dev ever).</p>
             <p>Real shit: I waste hella time f*cking around building stuff & learning random new things. It’s kinda my
@@ -31,17 +35,63 @@
         </section>
         <hr>
         <section id="skills">
-            <h2>My Skills</h2>
+            <h2>Tools & Platforms</h2>
             <ul>
-                <li>HTML/CSS</li>
-                <li>Linux</li>
-                <li>Git & GitHub</li>
-                <li>Testing</li>
-                <li>Testing</li>
-                <li>Testing</li>
-                <li>Testing</li>
-                <li>Testing</li>
+                <li><i class="devicon-html5-plain"></i>HTML</li>
+                <li><i class="devicon-css3-plain"></i>CSS</li>
+                <li><i class="devicon-javascript-plain"></i>JavaScript</li>
+                <li><i class="devicon-python-plain"></i>Python</li>
+                <li><i class="devicon-c-original"></i>C Programming</li>
+                <li><i class="devicon-godot-plain"></i>Godot</li>
+                <li><i class="devicon-github-original"></i>Git & GitHub</li>
+                <li><i class="devicon-vscode-plain"></i>VS Code</li>
+                <li><i class="devicon-linux-plain"></i>Linux</li>
+                <li><i class="devicon-archlinux-plain"></i>Arch BTW!</li>
             </ul>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Skills</th>
+                        <th>Category</th>
+                        <th>Proficiency Level</th>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS</td>
+                        <td>Frontend Basics</td>
+                        <td>7.5/10</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Logic & Interactivity</td>
+                        <td>6.5/10</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Scripting / Backend</td>
+                        <td>8/10</td>
+                    </tr>
+                    <tr>
+                        <td>C Programming</td>
+                        <td>Low-level Magic</td>
+                        <td>5/10</td>
+                    </tr>
+                    <tr>
+                        <td>Godot</td>
+                        <td>Game Dev</td>
+                        <td>6/10</td>
+                    </tr>
+                    <tr>
+                        <td>Git & GitHub</td>
+                        <td>Version Control</td>
+                        <td>7/10</td>
+                    </tr>
+                    <tr>
+                        <td>Linux / Arch</td>
+                        <td>OS & Environment</td>
+                        <td>8/10</td>
+                    </tr>
+                </table>
+            </div>
         </section>
     </div>
     <div class="footer">
