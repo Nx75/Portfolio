@@ -2,103 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nx75 — Developer Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <div class="navbar">
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-    <div class="main-container">
-        <section id="home">
-            <h1>My Portfolio</h1>
-            <figure class="profile-pic">
-                <img src="images/gruvbox.png" alt="My cool Gruvbox picture">
-                <figcaption>Nx75 (me) in developer cosplay</figcaption>
-            </figure>
-            <p>Sup, Nx75 here.</p>
-            <p>Passionate developer (said every dev ever).</p>
-            <p>Real shit: I waste hella time f*cking around building stuff & learning random new things. It’s kinda my
-                brand — positive side: I’m always building/learning. Negative side: most of it dies in my repo
-                graveyard. Personality 50/50 blessing & curse fr.</p>
-            <p>Anyway that’s the vibe. You in? </p>
-        </section>
-        <hr>
-        <section id="skills">
-            <h2>Tools & Platforms</h2>
-            <ul>
-                <li><i class="devicon-html5-plain"></i>HTML</li>
-                <li><i class="devicon-css3-plain"></i>CSS</li>
-                <li><i class="devicon-javascript-plain"></i>JavaScript</li>
-                <li><i class="devicon-python-plain"></i>Python</li>
-                <li><i class="devicon-c-original"></i>C Programming</li>
-                <li><i class="devicon-godot-plain"></i>Godot</li>
-                <li><i class="devicon-github-original"></i>Git & GitHub</li>
-                <li><i class="devicon-vscode-plain"></i>VS Code</li>
-                <li><i class="devicon-linux-plain"></i>Linux</li>
-                <li><i class="devicon-archlinux-plain"></i>Arch BTW!</li>
+
+    <!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">Nx75<span>.</span>me</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="table">
-                <table>
-                    <tr>
-                        <th>Skills</th>
-                        <th>Category</th>
-                        <th>Proficiency Level</th>
-                    </tr>
-                    <tr>
-                        <td>HTML/CSS</td>
-                        <td>Frontend Basics</td>
-                        <td>7.5/10</td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Logic & Interactivity</td>
-                        <td>6.5/10</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Scripting / Backend</td>
-                        <td>8/10</td>
-                    </tr>
-                    <tr>
-                        <td>C Programming</td>
-                        <td>Low-level Magic</td>
-                        <td>5/10</td>
-                    </tr>
-                    <tr>
-                        <td>Godot</td>
-                        <td>Game Dev</td>
-                        <td>6/10</td>
-                    </tr>
-                    <tr>
-                        <td>Git & GitHub</td>
-                        <td>Version Control</td>
-                        <td>7/10</td>
-                    </tr>
-                    <tr>
-                        <td>Linux / Arch</td>
-                        <td>OS & Environment</td>
-                        <td>8/10</td>
-                    </tr>
-                </table>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+     HERO
+     ============================================================ -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="hero-pre">sup, world</p>
+                    <h1 class="hero-name">Nx75<span class="accent">.</span></h1>
+                    <p class="hero-role">Passionate Developer &amp; Builder</p>
+                    <p class="hero-bio">
+                        I waste hella time f*cking around building stuff &amp; learning random new things.
+                        It's kinda my brand — positive side: always building/learning.
+                        Negative side: most of it dies in my repo graveyard.
+                        Personality 50/50 blessing &amp; curse fr. Anyway — you in?
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-avatar-wrap">
+                    <div class="hero-avatar-ring">
+                        <div class="hero-avatar">
+                            <img src="images/gruvbox.png" alt="Nx75"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:50%;position:relative;z-index:1;"
+                                onerror="this.style.display='none';" />
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
-    <div class="footer">
-        <footer>
-            &copy; 2026 Nx75. All rights reserved.
-        </footer>
-    </div>
+        </div>
+        <div class="scroll-hint">
+            <span class="mono" style="font-size:0.65rem;letter-spacing:0.15em;">scroll</span>
+            <div class="scroll-hint-line"></div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+    <footer>
+        <p>
+            &copy; 2026 <span>Nx75</span>. All rights reserved. ·
+            Built with <span>Gruvbox</span> dark &amp; a repo graveyard's worth of experience.
+        </p>
+    </footer>
 </body>
 
 </html>
