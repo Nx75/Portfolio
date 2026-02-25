@@ -106,6 +106,7 @@ nav {
   z-index: 100;
   transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
   border-bottom: 1px solid transparent;
+  background-color: var(--bg-hard);
 }
 
 nav.scrolled {
@@ -118,7 +119,6 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -132,6 +132,14 @@ nav.scrolled {
   letter-spacing: -0.02em;
 }
 
+.nav-logo img {
+  margin-left: 8px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .nav-logo span {
   color: var(--yellow);
 }
@@ -225,7 +233,7 @@ nav.scrolled {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 7rem;
   overflow: hidden;
   position: relative;
 }
@@ -403,8 +411,23 @@ nav.scrolled {
     width: 200px;
     height: 200px;
     font-size: 5rem;
+    display: none;
+    ;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .scroll-hint-line {
+    display: none;
+  }
+
+  .hero-avatar-ring {
+    display: none;
   }
 }
+
 
 /* ============================================================
    BUTTONS
@@ -451,6 +474,119 @@ nav.scrolled {
 .btn-sm {
   padding: 0.5rem 1.1rem;
   font-size: 0.72rem;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+#about {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+#about .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  color: var(--fg-0);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.35s forwards;
+}
+
+/* ============================================================
+   Skills
+   ============================================================ */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+#skills .section-title {
+  margin: 0;
+  padding: 2rem;
+  margin-left: 1.5rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+  align-self: flex-start;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  max-width: 100%;
+}
+
+.skills-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--aqua);
+  background: var(--bg-soft);
+  border: 1.5px solid var(--green);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  will-change: transform, box-shadow, background;
+}
+
+.skills-list li i,
+.skills-list li svg {
+  font-size: 1.15em;
+  width: 1.15em;
+  height: 1.15em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.skills-list li:hover,
+.skills-list li:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 0 0 3.5px color-mix(in srgb, var(--green) 22%, transparent);
+  background: color-mix(in srgb, var(--green) 9%, var(--bg-soft));
+  border-color: var(--green);
+  outline: none;
+}
+
+.skills-list li:hover i,
+.skills-list li:hover svg {
+  color: var(--green);
+  transform: scale(1.12);
+  transition: transform 0.28s ease, color 0.28s ease;
+}
+
+.skills-list li:active {
+  transform: translateY(-1px) scale(0.98);
+  transition: transform 0.12s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .skills-list li {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .skills-list li:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 0 4px color-mix(in srgb, var(--green) 30%, transparent);
+  }
 }
 
 /* ============================================================
