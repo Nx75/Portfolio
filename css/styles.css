@@ -853,3 +853,455 @@ footer a:hover {
     font-size: 0.8rem;
   }
 }
+
+#projects {
+  padding: 7rem 2rem;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-hard) 100%);
+  position: relative;
+  z-index: 1;
+}
+
+#projects .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--fg-0);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.35s forwards;
+}
+
+#projects .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--aqua);
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.project-card {
+  background: var(--bg-dark);
+  border: 2px solid var(--bg-2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--aqua), var(--yellow));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--aqua);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--bg-3);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--bg-2), var(--bg-1));
+}
+
+.project-card:hover img {
+  border-color: var(--aqua);
+  transform: scale(1.02);
+}
+
+.project-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--fg-0);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.project-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--aqua);
+  transition: width 0.3s ease;
+}
+
+.project-card:hover h3::after {
+  width: 60px;
+}
+
+.project-card p {
+  color: var(--fg-2);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.project-card .btn:hover {
+  transform: translateY(-2px);
+  background: var(--aqua);
+  color: var(--bg-hard);
+  border-color: var(--aqua);
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpCard 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 0.65s;
+}
+
+@keyframes fadeUpCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  #projects {
+    padding: 5rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects {
+    padding: 4rem 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tag {
+  background: var(--bg-1);
+  color: var(--fg-2);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--bg-2);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover .project-tag {
+  border-color: var(--aqua);
+  color: var(--aqua);
+}
+
+
+#contact {
+  padding: 7rem 2rem;
+  background: var(--bg-dark);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#contact .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--fg-0);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.35s forwards;
+}
+
+#contact .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--aqua);
+  border-radius: 2px;
+}
+
+#contact p {
+  color: var(--fg-2);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 2rem auto 3rem;
+  font-family: 'JetBrains Mono', monospace;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.5s forwards;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.65s forwards;
+}
+
+#contact .btn {
+  min-width: 160px;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(142, 192, 124, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+#contact .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+#contact .btn-outline {
+  border: 2px solid var(--bg-3);
+  color: var(--fg-1);
+}
+
+#contact .btn-outline:hover {
+  border-color: var(--aqua);
+  color: var(--aqua);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(142, 192, 124, 0.15);
+}
+
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--fg-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-1);
+  border-radius: 50px;
+  border: 1px solid var(--bg-2);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--aqua);
+  color: var(--aqua);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: var(--aqua);
+}
+
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 5rem 1.5rem;
+  }
+
+  #contact p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: 1.5rem auto 2rem;
+  }
+
+  .contact-links {
+    gap: 1rem;
+  }
+
+  #contact .btn {
+    min-width: 140px;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .contact-item {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 4rem 1rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  #contact .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .contact-item {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--aqua-dark), transparent);
+  opacity: 0.3;
+}
+
+#contact::after {
+  content: '//';
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  color: var(--bg-2);
+  opacity: 0.2;
+  pointer-events: none;
+  transform: rotate(10deg);
+}
+
+#contact .contact-item a{
+  text-decoration: none;
+  color: var(--fg-2);
+  transition: color 0.3s ease;
+}
+
+#contact .contact-item a:hover {
+  color: var(--aqua);
+}
