@@ -1,1 +1,2 @@
 1) Update the Scrolling distance
+2) Re design the About section

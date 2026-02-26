@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nx75</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Playfair+Display:wght@400;700;900&display=swap"
         rel="stylesheet" />
+    <style>
+        /* Temporary fallback styles - remove once CSS loads */
+        body { visibility: hidden; }
+    </style>
 </head>
 
 <body>
@@ -22,7 +25,9 @@
      ============================================================ -->
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="#home" class="nav-logo"><img src="images/logo_nobg.png" alt=""></a>
+            <a href="#home" class="nav-logo">
+                <img src="images/logo_nobg.png" alt="Nx75 Logo" style="width: 60px; height: 60px;">
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -60,41 +65,40 @@
                 <div class="hero-avatar-wrap">
                     <div class="hero-avatar-ring">
                         <div class="hero-avatar">
-                            <img src="images/gruvbox.png" alt="Nx75"
+                            <img src="images/gruvbox.png" alt="Nx75 Avatar"
                                 style="width:100%;height:100%;object-fit:cover;border-radius:50%;position:relative;z-index:1;"
-                                onerror="this.style.display='none';" />
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='👤';" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--div class="scroll-hint">
-            <span class="mono" style="font-size:0.65rem;letter-spacing:0.15em;">scroll</span>
-            <div class="scroll-hint-line"></div>
-        </div-->
     </section>
     <div class="divider"></div>
+
     <!-- ============================================================
      ABOUT
      ============================================================ -->
-    <section class="about" id="about">
+    <section id="about">
         <h2 class="section-title">About Me</h2>
-        <p class="about-text">
-            I'm a self-taught developer with a passion for building and learning. I thrive on creating projects that
-            challenge me and allow me to grow my skills. Whether it's coding, game development, or exploring new
-            technologies, I'm always eager to dive in and see where it takes me. My journey is fueled by curiosity and a
-            desire to make cool stuff, even if it means a lot of it ends up in my repo graveyard. If you're looking for
-            someone who's enthusiastic, adaptable, and always up for a new challenge, let's connect!
-        </p>
+        <img src="images/real.jpg" alt="me" onerror="this.style.display='none'">
+        <div class="about-text">
+            <p>
+                I'm a self-taught developer with a passion for building and learning. I thrive on creating projects that
+                challenge me and allow me to grow my skills. Whether it's coding, game development, or exploring new
+                technologies, I'm always eager to dive in and see where it takes me. My journey is fueled by curiosity and a
+                desire to make cool stuff, even if it means a lot of it ends up in my repo graveyard. If you're looking for
+                someone who's enthusiastic, adaptable, and always up for a new challenge, let's connect!
+            </p>
+        </div>
     </section>
     <div class="divider"></div>
 
     <!-- ============================================================
      Skills & Technologies
      ============================================================ -->
-    <section class="skills" id="skills">
+    <section id="skills">
         <h2 class="section-title">Skills & Technologies</h2>
-
         <ul class="skills-list">
             <li><i class="devicon-html5-plain"></i> HTML</li>
             <li><i class="devicon-css3-plain"></i> CSS</li>
@@ -112,13 +116,13 @@
     <!-- ============================================================
      FOOTER
      ============================================================ -->
-
     <footer>
         <p>
             &copy; 2026 <span>Nx75</span>. All rights reserved. ·
             Built with <span>Gruvbox</span> dark &amp; a repo graveyard's worth of experience.
         </p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
