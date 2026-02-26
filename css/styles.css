@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   line-height: 1.7;
   overflow-x: hidden;
+  --scroll-damping: 0.08;
 }
 
 body::before {
