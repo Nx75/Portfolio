@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "portfolio",
+  "name": "tight-salad-93b8",
   "compatibility_date": "2026-04-16",
   "observability": {
     "enabled": true
